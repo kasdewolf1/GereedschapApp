@@ -1,0 +1,45 @@
+.plaatje{
+    border-radius: 200;
+    width: auto;
+    height: 200px;
+   left: 20%;
+   position: relative;
+}
+
+/* Stijl voor het formulier */
+form {
+    width: 350px;
+    margin: 200 auto;
+    padding: 20px;
+    border: 10px solid #ccc;
+    border-radius: 111px; /* Dit zorgt voor ronde randen */
+
+}
+
+/* Stijl voor de invoervelden */
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 300px; /* Ook hier kun je ronde randen toevoegen */
+    box-sizing: border-box;
+}
+
+/* Stijl voor de verzendknop */
+input[type="submit"] {
+    width: 100%;
+    background-color: #050505;
+    color: white;
+    padding: 10px 0;
+    margin: 10px 0;
+    border: none;
+    border-radius: 300px; /* Ook hier kun je ronde randen toevoegen */
+    cursor: pointer;
+}
+
+
+/* Stijl voor de foutmeldingen */
+.error {
+    color: red;
+}
