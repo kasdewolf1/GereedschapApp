@@ -25,4 +25,3 @@ dropdowns.forEach((dropdown) => {
     });
   });
 });
-
