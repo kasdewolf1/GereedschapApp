@@ -12,7 +12,11 @@ body {
   position: relative;
   margin: 5px;
 }
-
+.dropdown {
+  width: 100%;
+  position: relative;
+  margin: 5px;
+}
 .dropdown * {
   box-sizing: border-box;
   border-radius: 8px;
