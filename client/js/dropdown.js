@@ -14,7 +14,7 @@ dropdowns.forEach((dropdown) => {
   });
   options.forEach((option) => {
     option.addEventListener("click", () => {
-      selected.innerText = categorie + "> " + option.innerText;
+      selected.innerText = categorie + " > " + option.innerText;
       select.classList.remove("select-clicked");
       menu.classList.remove("menu-open");
 
