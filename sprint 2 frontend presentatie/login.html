@@ -15,11 +15,17 @@
     <img class="plaatje" src="img/Logo2.gereedschap.png">
     
     <p>Login</p>
-    <input type="text" name="username" placeholder="Gebruikersnaam" required>
-    <input type="email" name="email" placeholder="E-mailadres" required>
-    <input type="password" name="password" placeholder="Wachtwoord" required>
-    <input type="checkbox" checked="checked" name="remember"> Remember me
-    <input onclick="window.location.href = 'index 2.html'" type="submit" value="Sign-up" href="index 2.html">
+    <label for="username">Gebruikersnaam</label><br>
+    <input type="text" name="username" placeholder="Vul je gebruikersnaam of email in" required>
+
+    <label for="password">Wachtwoord</label><br>
+    <input type="password" name="password" placeholder="Vul je wachtwoord in" required>
+        <label class="container">
+        <input type="checkbox" checked="checked">
+        <span class="checkmark"></span>Remember me
+        </label>
+    <input onclick="window.location.href = 'index 2.html'" type="submit" value="Inloggen" href="index 2.html">
+
 
 </form>
 </body>

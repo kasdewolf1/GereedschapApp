@@ -7,31 +7,10 @@
  form {
     width: 360px;
     height: 800px;
-    padding: 20px;
+    padding: 16px;
     border: 2px solid #E6E6E6;
+    background-color: #FCFDFB;
     border-radius: 40px; /* Dit zorgt voor ronde randen */
-}
-
-/* Stijl voor de invoervelden */
-input[type="text"], input[type="email"], input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 300px; /* Ook hier kun je ronde randen toevoegen */
-    box-sizing: border-box;
-}
-
-/* Stijl voor de verzendknop */
-input[type="submit"] {
-    width: 100%;
-    background-color: #0a0a0a;
-    color: white;
-    padding: 10px 0;
-    margin: 10px 0;
-    border: none;
-    border-radius: 300px; /* Ook hier kun je ronde randen toevoegen */
-    cursor: pointer;
 }
 
 .plaatje{
@@ -48,9 +27,97 @@ input[type="submit"] {
 .error {
     color: red;
 }
+
 p{
     text-align: center;
     font-size: 40px;
     font-weight: 600;
     color: #333333;
 }
+
+label{
+    color: #333333;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* Stijl voor de invoervelden */
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+    margin: 8px 0 16px 0;
+    border: 1.5px solid #CDCDCD;
+    border-radius: 8px; /* Ook hier kun je ronde randen toevoegen */
+    box-sizing: border-box;
+}
+
+/* Stijl voor de verzendknop */
+input[type="submit"] {
+    width: 100%;
+    background-color: #333333;
+    color: #FCFDFB;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 16px 0;
+    margin: 50px 0;
+    border: none;
+    border-radius: 300px; /* Ook hier kun je ronde randen toevoegen */
+    cursor: pointer;
+}
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    border: 2px solid #333333;
+    border-radius: 4px;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #3FA85C;
+    border: 2px solid #3FA85C;
+  }
+    /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 5px;
+    top: 2px;
+    width: 4px;
+    height: 8px;
+    border: solid #FCFDFB;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+
+  
