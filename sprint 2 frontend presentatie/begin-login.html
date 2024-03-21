@@ -6,14 +6,19 @@
 </head>
 <body> 
 
-
-  <img class="plaatje" src="img/Logo2.gereedschap.jpeg">
-
-  <br> 
- 
-<button onclick="document.getElementById('id01').style.display='block'" style="width: 30%;"">Share Tools</button>
-<div id="id01" class="modal">
   
+<div class="logo-achtergrond">
+  <img class="plaatje" src="img/Logo2.gereedschap.png">
+    <div class="blur"></div>
+    <img class="radar-boven" src="img/Beginscherm - Radar Boven.png">
+    <img class="radar-beneden" src="img/Beignscherm - Radar Beneden.png">
+    <button onclick="document.getElementById('id01').style.display='block'">Share Tools</button>
+</div>
+
+
+
+<div id="id01" class="modal">
+
   <form class="modal-content animate" action="/action_page.php" method="post">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
