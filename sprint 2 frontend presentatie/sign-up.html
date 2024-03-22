@@ -10,16 +10,26 @@
     
 
 <form target="_blank" method="post">
-    <img class="plaatje" src="img/Logo2.gereedschap.jpeg">
-    <p style="text-align: center;">Share Tools</p>
-    <p style="text-align: center;">Sign-up</p>
+<input onclick="window.location.href = 'begin-login.html'" type="button" value="❮" href="begin-login.html">
+    <img class="plaatje" src="img/Logo2.gereedschap.png">
+    <p style="text-align: center;">Registreren</p>
 
-    <input type="text" name="username" placeholder="Naam" required>
-    <input type="text" name="birthdate" placeholder="Geboortedatum" required>
-    <input type="email" name="email" placeholder="E-mail" required>
-    <input type="password" name="password" placeholder="Wachtwoord" required>
-    <input type="text" name="residence" placeholder="Woonplaats" required>
-    <input onclick="window.location.href = 'index 2.html'" type="submit" value="Sign-up" href="index 2.html">
+    <label for="username">Gebruikersnaam</label><br>
+    <input type="text" name="username" placeholder="Vul je naam in" required>
+
+    <label for="birthdate">Geboortedatum</label><br>
+    <input type="text" name="birthdate" placeholder="Vul je geboortedatum in" required>
+
+    <label for="email">Email</label><br>
+    <input type="email" name="email" placeholder="Vul je email in" required>
+
+    <label for="password">Wachtwoord</label><br>
+    <input type="password" name="password" placeholder="Vul je wachtwoord in" required>
+
+    <label for="residence">Woonplaats</label><br>
+    <input type="text" name="residence" placeholder="Vul je woonplaats in" required>
+
+    <input onclick="window.location.href = 'index 2.html'" type="submit" value="Registreren" href="index 2.html">
 </form>
 
 </body>
