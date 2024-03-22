@@ -1,6 +1,7 @@
 body {
   font-family: Inter, sans-serif;
-  border: 2px solid purple;
+  background-color: #FDFCFB;
+  border: 2px solid #E9E6E2;
   width: 360px;
   height: 800px;
   margin: 0;
@@ -12,12 +13,24 @@ body {
   width: auto;
   position: absolute;
   display: flex;
-  margin: 148px 86px 0;
+  margin: 148px 0;
+}
+
+h1{
+  color: #333333;
+  font-size: 40px;
+  font-weight: 600;
+  position: absolute;
+  margin: 372px 0px;
+  display: flex;
+  justify-content: center;
+
 }
 
 .logo-achtergrond{
   position: relative;
   display: flex;
+  align-items: center;
   flex-direction: column;
 }
 
@@ -25,8 +38,7 @@ body {
     height: 225px;
     width: 203px;
     z-index: -10;
-    margin-left: 155px;
-    border: 2px solid red;
+    margin-left: 157px;
     position: relative;
     display: flex;
 }
@@ -35,8 +47,7 @@ body {
     height: 240px;
     width: 136px;
     z-index: -10;
-    margin-top: 74px;
-    border: 2px solid red;
+    margin: 74px 0 0 -225px;
     position: relative;
     display: flex;
 }
@@ -53,8 +64,84 @@ body {
     position: absolute;
 }
 
+  /* Set a style for all buttons */
+  button, .btn-main {
+    font-family: Inter, sans-serif;
+    display: block;
+    background-color: #333333;
+    color: #FDFCFB;
+    width: 91%;
+    padding: 16px 0;
+    margin: 16px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer; 
+    text-align: center;
+    position: relative;
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+button:hover, .btn-main:hover {
+    opacity: 0.8;
+}
 
 
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(51,51,51); /* Fallback color */
+  background-color: rgba(51,51,51,0.4); /* Black w/ opacity */
+  }
+
+    
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #FDFCFB;
+    margin: 8% 10%;
+    border-radius: 24px;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+
+  /* Center the image and position the close button */
+  .imgcontainer {
+    text-align: center;
+    position: relative;
+  }
+  
+  .plaatje-popup{
+    width: 80px;
+    margin-top: 40px
+  }
+
+ .close {
+    position: absolute;
+    right: 24px;
+    top: 16px;
+    color: #333333;
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  .container {
+    padding: 16px;
+    border-radius: 0 0 24px 24px;
+    /* margin: 0 auto;
+    width: 90%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
 /* Full-width input fields */
 input[type=text], input[type=password] {
     width: 100%;
@@ -65,98 +152,39 @@ input[type=text], input[type=password] {
     box-sizing: border-box;
   }
   
-  /* Set a style for all buttons */
-  button, .btn-main {
-    display: block;
-    background-color: #333333;
-    color: #FDFCFB;
-    padding: 16px 0;
-    margin: 0 16px;
-    border-radius: 100px;
-    border: none;
-    cursor: pointer; 
-    text-align: center;
-    position: relative;
-    font-weight: 600;
-    font-weight: 16px;
-  }
-  
-  button:hover, .btn-main:hover {
-    opacity: 0.8;
-  }
-  
   /* Extra styles for the cancel button */
   .cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
-  }
-  
-  /* Center the image and position the close button */
-  .imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
-    position: relative;
+    width: 91%;
+    padding: 16px;
+    background-color: #BC3030;
   }
   
 
-  
-  .container {
-    padding: 16px;
-    /* margin: 0 auto;
-    width: 90%; */
-    display: flex;
-    flex-direction: column;
+
+  .close:hover,
+  .close:focus {
+    color: #BC3030;
+    cursor: pointer;
   }
+
+
   
   span.psw {
     float: right;
     padding-top: 16px;
   }
   
-  /* The Modal (background) */
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    padding-top: 60px;
-  }
-  
-  /* Modal Content/Box */
-  .modal-content {
-    background-color: #fefefe;
-    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-  }
+
   
   /* The Close Button (x) */
-  .close {
-    position: absolute;
-    right: 25px;
-    top: 0;
-    color: #000;
-    font-size: 35px;
-    font-weight: bold;
-  }
+ 
   
-  .close:hover,
-  .close:focus {
-    color: red;
-    cursor: pointer;
-  }
+
   
   /* Add Zoom Animation */
   .animate {
     -webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s
+    animation: animatezoom 0.6s;  
   }
   
   @-webkit-keyframes animatezoom {
