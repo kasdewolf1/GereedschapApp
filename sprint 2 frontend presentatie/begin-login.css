@@ -1,210 +1,177 @@
 body {
   font-family: Inter, sans-serif;
-  background-color: #FDFCFB;
-  border: 2px solid #E9E6E2;
-  width: 360px;
-  height: 800px;
+  background-color: #F3F0F0;
   margin: 0;
-  border-radius: 32px;
+  padding: 0;
+  overflow: hidden;
 }  
 
 .plaatje {
   height: 200px;
   width: auto;
-  position: absolute;
-  display: flex;
-  margin: 148px 0;
 }
 
 h1{
   color: #333333;
-  font-size: 40px;
+  font-size: 80px;
   font-weight: 600;
-  position: absolute;
-  margin: 372px 0px;
-  display: flex;
-  justify-content: center;
-
 }
+
 
 .logo-achtergrond{
-  position: relative;
+  position: fixed;
+  bottom: 0;
+  background-color:#FCFDFB;
+  box-shadow: 0px 0px 16px #ADADAD;
+  border-radius: 24px 24px 0;
+  width: 56.6%;
+  height: 87.7%;
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin: 7.9% 21.6% 0%;
 }
 
-.radar-boven {
-    height: 225px;
-    width: 203px;
-    z-index: -10;
-    margin-left: 157px;
-    position: relative;
-    display: flex;
+
+.ellipse44{
+position: absolute;
+width: 888px;
+height: 860px;
+left: -152px;
+top: -319px;
+background: #3FA85C;
+opacity: 0.24;
+filter: blur(100px);
+display: flex;
 }
 
-.radar-beneden {
-    height: 240px;
-    width: 136px;
-    z-index: -10;
-    margin: 74px 0 0 -225px;
-    position: relative;
-    display: flex;
+.ellipse45{
+position: absolute;
+overflow: hidden;
+width: 1040px;
+height: 700px;
+left: 38.5%;
+top: 541px;
+background: #3FA85C;
+opacity: 0.24;
+filter: blur(100px);
+display: flex;
 }
 
-.blur {
-    box-shadow: 0 0 16px rgba(51, 51, 51, 24%); 
-    background-color: rgba(253, 252, 251, 20%);
-    width: 328px;
-    height: 431px;
-    border-radius: 24px;
-    z-index: -5;
-    backdrop-filter: blur(5px);
-    margin: 68px 16px 0;
-    position: absolute;
+.ellipse46{
+position: absolute;
+width: 450px;
+height: 435.81px;
+left: 124px;
+top: 320px;
+background: #A083E4;
+opacity: 0.2;
+filter: blur(100px);
+display: flex
 }
 
-  /* Set a style for all buttons */
-  button, .btn-main {
+.ellipse47{
+position: absolute;
+width: 400px;
+height: 387.39px;
+left: 80%;
+top: 464px;
+background: #1685F4;
+opacity: 0.2;
+filter: blur(100px);
+display: flex;
+}
+
+.container{
+  width: 47.6%;
+}
+
+
+/* Set a style for all buttons */
+.btn-main {
     font-family: Inter, sans-serif;
     display: block;
     background-color: #333333;
     color: #FDFCFB;
-    width: 91%;
-    padding: 16px 0;
-    margin: 16px;
-    border-radius: 100px;
-    border: none;
+    padding: 16px;
+    margin: 16px 0;
+    border-radius: 8px;
     cursor: pointer; 
     text-align: center;
-    position: relative;
     font-weight: 600;
     font-size: 16px;
+    text-decoration: none;
+    transition: ease-in-out 0.3s;
   }
 
 button:hover, .btn-main:hover {
-    opacity: 0.8;
+  background-color: #000000;
+}
+
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 360px) {
+  
+h1{
+  color: #333333;
+  font-size: 40px;
+  font-weight: 600;
 }
 
 
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(51,51,51); /* Fallback color */
-  background-color: rgba(51,51,51,0.4); /* Black w/ opacity */
-  }
-
-    
-  /* Modal Content/Box */
-  .modal-content {
-    background-color: #FDFCFB;
-    margin: 8% 10%;
-    border-radius: 24px;
-    width: 80%; /* Could be more or less, depending on screen size */
-  }
-
-  /* Center the image and position the close button */
-  .imgcontainer {
-    text-align: center;
-    position: relative;
-  }
-  
-  .plaatje-popup{
-    width: 80px;
-    margin-top: 40px
-  }
-
- .close {
-    position: absolute;
-    right: 24px;
-    top: 16px;
-    color: #333333;
-    font-size: 35px;
-    font-weight: bold;
-  }
-
-  .container {
-    padding: 16px;
-    border-radius: 0 0 24px 24px;
-    /* margin: 0 auto;
-    width: 90%; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  
-/* Full-width input fields */
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-  }
-  
-  /* Extra styles for the cancel button */
-  .cancelbtn {
-    width: 91%;
-    padding: 16px;
-    background-color: #BC3030;
-  }
-  
+.logo-achtergrond{
+  position:relative;
+  bottom: 8.5%;
+  border-radius: 24px;
+  width: 328px;
+  height: 664px;
+  margin: 20% 4.4%;
+}
 
 
-  .close:hover,
-  .close:focus {
-    color: #BC3030;
-    cursor: pointer;
-  }
+.ellipse44{
+width: 300px;
+height: 300px;
+left: -75px;
+top: -56px;
+opacity: 0.34;
+}
+
+.ellipse45{
+width: 400px;
+height: 400px;
+left: 38.5%;
+top: 515px;
+opacity: 0.34;
+}
+
+.ellipse46, .ellipse47{
+display: none;
+}
 
 
+.container{
+  width: 48.7%;
+}
   
-  span.psw {
-    float: right;
-    padding-top: 16px;
-  }
-  
+.btn-main {
+  font-family: Inter, sans-serif;
+  display: block;
+  background-color: #333333;
+  color: #FDFCFB;
+  padding: 16px;
+  margin: 16px 0;
+  border-radius: 8px;
+  cursor: pointer; 
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  transition: ease-in-out 0.3s;
+}
 
-  
-  /* The Close Button (x) */
- 
-  
-
-  
-  /* Add Zoom Animation */
-  .animate {
-    -webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s;  
-  }
-  
-  @-webkit-keyframes animatezoom {
-    from {-webkit-transform: scale(0)} 
-    to {-webkit-transform: scale(1)}
-  }
-    
-  @keyframes animatezoom {
-    from {transform: scale(0)} 
-    to {transform: scale(1)}
-  }
-  
-  /* Change styles for span and cancel button on extra small screens */
-  @media screen and (max-width: 300px) {
-    span.psw {
-       display: block;
-       float: none;
-    }
-    .cancelbtn {
-       width: 100%;
-    }
-  
+button:hover, .btn-main:hover {
+background-color: #000000;
+}
     }
