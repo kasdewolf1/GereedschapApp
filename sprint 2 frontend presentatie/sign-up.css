@@ -1,16 +1,72 @@
 body{
     margin: 0;
     font-family: Inter, sans-serif;
+    background-color: #E9E6E5;
  }
+ .ellipse44{
+  position: absolute;
+  width: 888px;
+  height: 860px;
+  left: -152px;
+  top: -319px;
+  background: #3FA85C;
+  opacity: 0.24;
+  filter: blur(100px);
+  display: flex;
+  }
+  
+  .ellipse45{
+  position: absolute;
+  overflow: hidden;
+  width: 1040px;
+  height: 700px;
+  left: 38.5%;
+  top: 541px;
+  background: #3FA85C;
+  opacity: 0.24;
+  filter: blur(100px);
+  display: flex;
+  }
+  
+  .ellipse46{
+  position: absolute;
+  width: 450px;
+  height: 435.81px;
+  left: 124px;
+  top: 320px;
+  background: #A083E4;
+  opacity: 0.2;
+  filter: blur(100px);
+  display: flex
+  }
+  
+  .ellipse47{
+  position: absolute;
+  width: 400px;
+  height: 387.39px;
+  left: 80%;
+  top: 464px;
+  background: #1685F4;
+  opacity: 0.2;
+  filter: blur(100px);
+  display: flex;
+  }
 
-/* Stijl voor het formulier */
-form {
-    width: 328px;
-    height: 930px;
-    padding: 16px;
-    border: 2px solid #E9E6E2;
+
+ /* Stijl voor het formulier */
+ .signup {
+    z-index: 10;
+    position: relative;
+    box-shadow: 0px 0px 16px #ADADAD;
+    width: 41.7%;
+    height: 49%;
+    margin: 7.9% 29.1%;
+    padding: 40px 0 0 40px;
     background-color: #FDFCFB;
-    border-radius: 32px; /* Dit zorgt voor ronde randen */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 24px; /* Dit zorgt voor ronde randen */
 }
 
 .plaatje{
@@ -19,7 +75,7 @@ form {
     height: 80px;
     position: relative;
     display: flex;
-    margin: 64px 140px 40px 140px;
+    margin: 1px 0 0 43.6%;
     box-shadow: 0px 0px 16px #ADADAD;
 }
 
@@ -28,9 +84,14 @@ form {
     color: #BC3030;
 }
 
+form{
+  padding: 0% 17.7% 0 11.3%;
+}
+
 p{
     text-align: center;
     font-size: 40px;
+    line-height: 48px;
     font-weight: 600;
     color: #333333;
 }
@@ -60,26 +121,27 @@ input[type="submit"] {
     font-family: Inter, sans-serif;
     font-size: 16px;
     font-weight: 600;
-    padding: 16px;
-    margin-top: 64px;
+    padding: 16px 0;
+    margin: 64px 0;
     border: none;
-    border-radius: 300px; /* Ook hier kun je ronde randen toevoegen */
+    border-radius: 8px; /* Ook hier kun je ronde randen toevoegen */
     cursor: pointer;
-    transition: ease-in-out 0.3s;
+    transition: ease-in-out 0.3s; 
 }
 
 input[type="submit"]:hover{
-    background-color: #000000;
+  background-color: #000000;
 }
-  
+
 input[type="button"]{
-    background-color: #FDFCFB;
-    color: #333333;
-    border: 2px solid #CDCDCD;
-    font-size: 16px;
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
-    cursor: pointer;
+  background-color: #FDFCFB;
+  color: #333333;
+  border: 2px solid #CDCDCD;
+  font-size: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  cursor: pointer;
+ 
 }
 

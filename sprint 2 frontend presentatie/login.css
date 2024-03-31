@@ -10,7 +10,7 @@
   left: -152px;
   top: -319px;
   background: #3FA85C;
-  opacity: 0.24;
+  opacity: 0.34;
   filter: blur(100px);
   display: flex;
   }
@@ -23,7 +23,7 @@
   left: 38.5%;
   top: 541px;
   background: #3FA85C;
-  opacity: 0.24;
+  opacity: 0.34;
   filter: blur(100px);
   display: flex;
   }
@@ -35,7 +35,7 @@
   left: 124px;
   top: 320px;
   background: #A083E4;
-  opacity: 0.2;
+  opacity: 0.34;
   filter: blur(100px);
   display: flex
   }
@@ -47,13 +47,15 @@
   left: 80%;
   top: 464px;
   background: #1685F4;
-  opacity: 0.2;
+  opacity: 0.34;
   filter: blur(100px);
   display: flex;
   }
- 
+
+
  /* Stijl voor het formulier */
- .login {
+ .login, .signup {
+    z-index: 10;
     position: relative;
     box-shadow: 0px 0px 16px #ADADAD;
     width: 41.7%;
@@ -64,7 +66,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    border-radius: 32px; /* Dit zorgt voor ronde randen */
+    border-radius: 24px; /* Dit zorgt voor ronde randen */
 }
 
 .plaatje{
@@ -120,7 +122,7 @@ input[type="submit"] {
     font-size: 16px;
     font-weight: 600;
     padding: 16px 0;
-    margin: 50px 0;
+    margin: 64px 0;
     border: none;
     border-radius: 8px; /* Ook hier kun je ronde randen toevoegen */
     cursor: pointer;
@@ -197,5 +199,121 @@ input[type="button"]{
     display: block;
   }
   
+
+  @media screen and (max-width: 360px) {
+    body{
+      background-color: #FDFCFB;
+    }
+
+    .ellipse46, .ellipse47{
+      display: none;
+      }
+
+      .ellipse44{
+          width: 300px;
+          height: 300px;
+          left: 60px;
+          top: -100px;
+          opacity: 0.24;
+        }
+
+        .ellipse45{
+          overflow: hidden;
+          width: 400px;
+          height: 400px;
+          left: -145px;
+          top: 400px;
+          opacity: 0.24;
+          }
+
+     /* Stijl voor het formulier */
+     .login {
+        z-index: 10;
+        position: relative;
+        box-shadow: 0px 0px 16px #adadad00;
+        width: 100%;
+        height: 100%;
+        margin: 0%;
+        padding: 4.4%;
+        background-color: #fdfcfb00;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 24px; /* Dit zorgt voor ronde randen */
+        border: 2px solid red;
+    }
+    
+    .plaatje{
+        margin: 64px 0 0 37.8%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid blue;
+    }
+    
+    form{
+      padding: 0%;
+      height: 800px;
+      border: 2px solid purple;
+    }
+    
+    p{
+        text-align: center;
+        margin: 49px 0;
+        font-size: 40px;
+        font-weight: 600;
+        color: #333333;
+        border: 2px solid yellow;
+    }
+    
+    label{
+        color: #333333;
+        font-weight: 600;
+        font-size: 16px;
+    }
+    
+    /* Stijl voor de invoervelden */
+    input[type="text"], input[type="email"], input[type="password"] {
+        width: 100%;
+        padding: 16px;
+        font-size: 16px;
+        margin: 8px 0 16px 0;
+        border: 1.5px solid #CDCDCD;
+        border-radius: 8px; /* Ook hier kun je ronde randen toevoegen */
+        box-sizing: border-box;
+    }
+    
+    /* Stijl voor de verzendknop */
+    input[type="submit"] {
+        width: 100%;
+        background-color: #333333;
+        color: #FCFDFB;
+        font-family: Inter, sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 16px 0;
+        margin: 50px 0;
+        border: none;
+        border-radius: 8px; /* Ook hier kun je ronde randen toevoegen */
+        cursor: pointer;
+        transition: ease-in-out 0.3s;
+    }
+    
+    input[type="submit"]:hover{
+      background-color: #000000;
+    }
+    
+    input[type="button"]{
+      background-color: #FDFCFB;
+      color: #333333;
+      border: 2px solid #CDCDCD;
+      font-size: 16px;
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    
+  }
 
   
