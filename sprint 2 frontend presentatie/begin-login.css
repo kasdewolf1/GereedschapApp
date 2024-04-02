@@ -48,14 +48,13 @@ h1{
   
   .ellipse45{
   position: absolute;
-  width: 68.7%;
-  height: 71.2%;
+  width: 85.9%;
+  height: 90.8%;
   left: 32.7%;
   top: 55%;
   background: #3FA85C;
-  opacity: 0.5;
+  opacity: 0.34;
   filter: blur(200px);
-  display: flex;
   }
   
   .ellipse46{
@@ -72,14 +71,25 @@ h1{
   
   .ellipse47{
   position: absolute;
-  width: 52.9%;
-  height: 48.8%;
-  left: 73.5%;
-  top: 12.7%;
-  background: #1685F4;
+  width: 62.9%;
+  height: 110.1%;
+  left: 63.4%;
+  top: -22.4%;
+  background: #A083E4;
+  opacity: 0.34;
+  border-radius: 1000px;
+  filter: blur(200px);
+  }
+
+  .ellpise48{
+  position: absolute;
+  width: 47.7%;
+  height: 71.2%;
+  left: -8.9%;
+  top: 71.1%;
+  background: #3FA85C;
   opacity: 0.34;
   filter: blur(200px);
-  display: flex;
 }
 
 
