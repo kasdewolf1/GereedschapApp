@@ -13,6 +13,8 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
-
+router.get('/productinfopagina', (req, res) => {
+    res.render('productinfopagina');
+});
 
 module.exports = router;

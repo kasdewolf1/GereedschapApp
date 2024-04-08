@@ -31,7 +31,7 @@ exports.register = async (req, res) => {
                 message: 'Password Didn\'t Match!'
             });
         }
-    
+
 
         let hashedPassword = await bcrypt.hash(password, 8);
 
