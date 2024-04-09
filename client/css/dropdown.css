@@ -8,67 +8,51 @@ body {
 }
 
 .dropdown {
-  width: 200px;
+  width: 100%;
   position: relative;
   margin: 5px;
 }
-
 .dropdown * {
   box-sizing: border-box;
+  border-radius: 8px;
 }
 
 .select {
-  background: #2a2f3b;
+  background: #848484;
   color: #fff;
-  display: flex;
+  display: absolute;
   justify-content: space-between;
   align-items: center;
-  border: 2px #2a2f3b solid;
-  border-radius: 0.5em;
+  border-radius: 10px;
   padding: 1em;
   cursor: pointer;
-  transition: background 0.3s;
 }
 
 .select-clicked {
-  border: 2px #26489a solid;
-  box-shadow: 0 0 0.8em #26489a;
+  border: 2px #000000 solid;
 }
 
 .select:hover {
-  background: #323741;
+  background: #686868;
 }
 
 .caret {
   width: 0;
   height: 0;
-  border-left: 5px solid transparant;
-  border-right: 5px solid transparant;
   border-top: 6px solid #fff;
-  transition: 0.3s;
-}
-
-.caret-rotate {
-  transform: rotate(180deg);
 }
 
 .menu {
   list-style: none;
   padding: 0.2em 0.5em;
-  background: #323741;
-  border: 1px #363a43 solid;
-  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
-  border-radius: 0.5 em;
-  color: #9fa5b5;
-  position: absolute;
+  background: #b3b3b3;
+  border-radius: 10px;
+  color: #000000;
+  position: left;
   top: 3em;
-  left: 50%;
   width: 100%;
-  transform: translateX(-50%);
   opacity: 0;
   display: none;
-  transition: 0.2s;
-  z-index: 1;
 }
 
 ul.menu {
@@ -79,21 +63,15 @@ ul.menu {
 ul.menu li {
   display: block;
   width: 100%;
-  padding: 0.5em 1em;}
-
-/*.menu li {
-  padding: 0.7em 0.5em;
-  margin: 0.3em 0;
-  border-radius: 0.5em;
-  cursor: pointer;
+  padding: 0.5em 1em;
 }
-*/
+
 .menu li:hover {
-  background: #2a2d35;
+  background: #868686;
 }
 
 .active {
-  background: #23242a;
+  background: #676767;
 }
 
 .menu-open {

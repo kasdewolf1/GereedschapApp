@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/sign-up.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ronde Balk in Formulier</title>
+</head>
+<body>
+
+
+<form action="/auth/register" method="POST">
+    <img class="plaatje" src="./img/Logo2.gereedschap.jpeg">
+    <p style="text-align: center;">Share Tools</p>
+    <p style="text-align: center;">Sign-up</p>
+
+    <input type="text" name="name" id="name" placeholder="Naam" required>
+    <input type="text" name="birthdate" id="birthdate" placeholder="Geboortedatum" required>
+    <input type="email" name="email" id="email" placeholder="E-mail" required>
+    <input type="password" name="password" id="password" placeholder="Wachtwoord" required>
+    <input type="password" name="passwordConfirm" id="passwordConfirm" placeholder="Wachtwoord herhalen" required>
+    <input type="text" name="woonplaats" id="woonplaats" placeholder="woonplaats" required>
+    <input type="submit" value="Sign-up">
+    {{#if message }}
+    <h4 class="alart alart-danger mt-4">{{message}}</h4>
+    {{/if}}
+</form>
+
+</body>
+</html>
