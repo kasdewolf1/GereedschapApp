@@ -17,4 +17,8 @@ router.get('/productinfopagina', (req, res) => {
     res.render('productinfopagina');
 });
 
+router.get('/indexloggedin', (req, res) => {
+    res.render('indexloggedin');
+});
+
 module.exports = router;

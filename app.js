@@ -17,7 +17,6 @@ const publicDirectory = path.join(__dirname, './public');
 app.use(express.static(publicDirectory));
 
 
-
 //zorgt ervoor dat je data van forms kan pakken
 app.use(express.urlencoded({ extended: false }));
 //zorg ervoor dat data als json komt
