@@ -69,6 +69,20 @@ exports.login = async (req, res) => {
             });
         }
 
+        db.query('SELECT * FROM users WHERE name = ?', [name], async (error, results) => {
+            if (error) {
+                console.log(error);
+                return res.render('login', {
+                    message: 'An error occurred'
+                });
+            }
+        
+            if (results.length === 0) {
+                return res.render('login', {
+                    message: 'Invalid name or password'
+                });
+            }
+
         const user = results[0];
 
         const isPasswordMatch = await bcrypt.compare(password, user.password);
@@ -78,15 +92,6 @@ exports.login = async (req, res) => {
                 message: 'Invalid email or password'
             });
         }
-
-        const isnameMatch = await compare(name, user.name);
-
-        if(!isnameMatch) {
-            return res.render('login', {
-                message: 'Invalid name or password'
-            });
-        }
-
         const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, {
             expiresIn: process.env.JWT_EXPIRES_IN
         });
@@ -101,8 +106,9 @@ exports.login = async (req, res) => {
         res.cookie('jwt', token, cookieOptions);
 
         return res.render('indexloggedin', {
-            message: 'Logged in successfully', email: email
+            message: 'Logged in successfully', name: user.name
         });
     }
     );
+    });
 }
