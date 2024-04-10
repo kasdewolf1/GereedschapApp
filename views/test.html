@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producten</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Aanvullende opmaak */
+        .product {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .product-image {
+            height: 150px; /* Hoogte van de productafbeelding */
+            background-color: #f5f5f5; /* Achtergrondkleur van de productafbeelding */
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row" id="productContainer">
+            <!-- Hier worden de producten dynamisch ingevoegd -->
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // JavaScript om producten op te halen en weer te geven
+        document.addEventListener('DOMContentLoaded', function() {
+            // Simuleer het ophalen van productgegevens uit de database (vervang dit met echte logica)
+            const products = [
+                { name: 'Product 1', imageUrl: 'product1.jpg', availability: true },
+                { name: 'hamer', imageUrl: 'product2.jpg', availability: false },
+                // Voeg meer producten toe indien nodig
+            ];
+
+            const productContainer = document.getElementById('productContainer');
+
+            // Itereer over de lijst met producten en voeg ze toe aan de DOM
+            products.forEach(product => {
+                const productHtml = `
+                    <div class="col-md-4">
+                        <div class="product">
+                            <div class="product-image"></div>
+                            <img src="${product.imageUrl}" alt="${product.name}" class="img-fluid mb-3">
+                            <h4>${product.name}</h4>
+                            <p>Status: ${product.availability ? 'Beschikbaar' : 'Niet beschikbaar'}</p>
+                            <a href="/productinfo/${product.id}" class="btn btn-primary">Zie meer</a>
+                        </div>
+                    </div>
+                `;
+
+                productContainer.innerHTML += productHtml;
+            });
+        });
+    </script>
+</body>
+</html>

@@ -12,13 +12,12 @@ router.get('/register', (req, res) => {
 router.get('/login', (req, res) => {
     res.render('login');
 });
-
-router.get('/productinfopagina', (req, res) => {
-    res.render('productinfopagina');
-});
-
 router.get('/indexloggedin', (req, res) => {
     res.render('indexloggedin');
+});
+
+router.get('/productinfo', (req, res) => {
+    res.render('productinfo');
 });
 
 module.exports = router;

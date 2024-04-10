@@ -7,8 +7,6 @@ const db = mysql.createConnection({
     database: process.env.DATABASE
 });
 
-// controllers/toolsController.js
-
 
 // Controllermethode om alle gereedschappen op te halen
 exports.viewTools = (req, res) => {

@@ -1,10 +1,11 @@
 const express = require('express');
-const userController = require('../controllers/user');
 const router = express.Router();
+const userController = require('../controllers/user');
 
-//router.post('/logout', userController.logoutUser);
-//router.post('/delete', userController.deleteUser);
-//router.post('/edit', userController.editUser);
+// Definieer de route om een specifieke gebruiker op te halen op basis van userId
+router.get('/:userId', userController.getUserById);
+
+module.exports = router;
 
 
 

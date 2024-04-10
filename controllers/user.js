@@ -7,48 +7,21 @@ const db = mysql.createConnection({
     database: process.env.DATABASE
 });
 
-// controllers/userController.js
+exports.getUserById = (req, res) => {
+    const userId = user.userId; // Haal gebruikers-ID op uit sessie of JWT
 
-// Simuleer een array van gebruikers (dit zou afkomstig kunnen zijn van een database)
-let users = [];
+    // Voer een databasequery uit om gebruikersgegevens op te halen op basis van userId
+    db.query('SELECT * FROM users WHERE id = ?', [userId], (error, results) => {
+        if (error) {
+            console.log('Fout bij het ophalen van gebruikersgegevens:', error);
+            return res.status(500).send('Er is een fout opgetreden bij het ophalen van gebruikersgegevens.');
+        }
 
+        if (results.length === 0) {
+            return res.status(404).send('Gebruiker niet gevonden.');
+        }
 
-// Controllermethode om een gebruiker in te loggen
-exports.loginUser = (req, res) => {
-    const { username, password } = req.body;
-    // Zoek naar de gebruiker in de database (hier gesimuleerd met een array)
-    const user = users.find(user => user.username === username && user.password === password);
-    if (user) {
-        res.send(`Welkom terug, ${username}`);
-    } else {
-        res.status(401).send('Ongeldige gebruikersnaam of wachtwoord');
-    }
-};
-
-// Controllermethode om een gebruiker uit te loggen
-exports.logoutUser = (req, res) => {
-    // Hier zou je normaal gesproken de gebruikerssessie beëindigen
-    res.send('Gebruiker succesvol uitgelogd');
-};
-
-// Controllermethode om een gebruiker te verwijderen
-exports.deleteUser = (req, res) => {
-    const { username } = req.body;
-    // Zoek en verwijder de gebruiker uit de database (hier gesimuleerd met een array)
-    users = users.filter(user => user.username !== username);
-    res.send('Gebruiker succesvol verwijderd');
-};
-
-// Controllermethode om een gebruiker te bewerken
-exports.editUser = (req, res) => {
-    const { username, newEmail, newPassword } = req.body;
-    // Zoek en bewerk de gebruiker in de database (hier gesimuleerd met een array)
-    const user = users.find(user => user.username === username);
-    if (user) {
-        user.email = newEmail || user.email;
-        user.password = newPassword || user.password;
-        res.send('Gebruiker succesvol bijgewerkt');
-    } else {
-        res.status(404).send('Gebruiker niet gevonden');
-    }
+        const user = results[0];
+        res.json(user); // Stuur gebruikersgegevens terug naar de client als JSON
+    });
 };
