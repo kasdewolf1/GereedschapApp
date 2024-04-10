@@ -36,7 +36,7 @@ db.connect( (error) => {
 //define routes
 app.use('/', require('./routes/pages'));
 app.use('/auth', require('./routes/auth'));
-app.use('/tools', require('./routes/tools'));
+//app.use('/tools', require('./routes/tools'));
 app.use('/user', require('./routes/user'));
 
 
