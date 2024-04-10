@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/login.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ronde Balk in Formulier</title>
+</head>
+<body>
+
+
+<form action="/auth/login" method="post">
+    <img class="plaatje" src="/img/Logo2.gereedschap.jpeg">
+    
+    <p style="text-align: center;">Share Tools</p>
+    <p style="text-align: center;">Login</p>
+    <input type="text" id="name" name="name" placeholder="name" required>
+    <input type="email" id="email" name="email" placeholder="E-mailadres" required>
+    <input type="password" id="password" name="password" placeholder="Wachtwoord" required>
+    <input type="submit" value="Inloggen">
+ <div style="background-color: red; color: white; padding: 10px; font-weight: bold;">
+    {{ message }}
+</div>
+</form>
+
+</body>
+</html>
