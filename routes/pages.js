@@ -20,4 +20,9 @@ router.get('/productinfo', (req, res) => {
     res.render('productinfo');
 });
 
+router.get('Tooltoevoegen', (req, res) => {
+    res.render('Tooltoevoegen');
+});
+
+
 module.exports = router;
